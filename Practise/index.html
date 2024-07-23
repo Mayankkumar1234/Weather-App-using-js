@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map</title>
+</head>
+
+<body>
+
+    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;"><div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src=""></iframe></div><a class="embed-ded-maphtml" href="https://www.bootstrapskins.com/themes" id="grab-maps-authorization">premium bootstrap themes</a>
+    <style>
+    #google-maps-canvas img{
+      max-height:none;max-width:none!important;background:none!important;
+      }</style>
+      </div>
+
+    <div id="map"></div>
+
+    <input id="city" type="search" placeholder="Search City">
+    <button id="search">Search</button>
+    
+</body>
+
+</html>
+
+<script>
+
+
+//src = https://www.google.com/maps/embed/v1/place?q=delhi&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8
+
+document.getElementById("search").addEventListener("click", function(){
+
+    let city = document.getElementById("city").value
+    appendCity(city)
+})
+
+let mapContainer = document.getElementById("map")
+function appendCity(city){
+    mapContainer.innerHTML = null
+    let iframe = document.createElement("iframe")
+    iframe.src = "https://www.google.com/maps/embed/v1/place?q="+city+"&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+    mapContainer.append(iframe)
+}
+
+
+
+
+</script>
