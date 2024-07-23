@@ -91,7 +91,6 @@ function printData(cityData){
 function setmap(city){
 let mapContainer=document.querySelector(".mapPart");
 mapContainer.innerText=''
-// mapContainer.innerHTML="";
  if(city){
     mapContainer.innerHTML=
     `
@@ -104,7 +103,7 @@ function setmapEle(){
      console.log(imgStyle);
     //  innerTxt.innerText="City not Found";
     if (imgStyle) {
-        imgStyle.style.display = "block"; // Ensure the element exists and then set display style
+        imgStyle.style.display = "block"; 
         console.log("Map part set to display block");
     } else {
         console.error("Element .mapPart not found");
